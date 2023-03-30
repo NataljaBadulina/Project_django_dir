@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>{{ flatpage.title }}</title>
-</head>
-<body>
-    <h2>{{ flatpage.title }}</h2>
-    <hr>
-    <h3>The latest fot today:</h3>
-    {{ flatpage.content }}
-</body>
+{% extends 'flatpages/default.html'%}
+
+{% block title%}
+    <html lang="en">
+    <head>
+    <title>{{ flatpage.title }}</title>
+    </head>
+{% endblock title%}
+{% block content%}
+
+        <h2>{{ flatpage.title }}</h2>
+        <hr>
+        <h3>The latest news for today:</h3>
+        {{ flatpage.content }}
+
+{% endblock content%}
 </html>
